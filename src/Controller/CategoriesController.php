@@ -10,4 +10,10 @@
 			$categories = $this->Paginator->paginate($this->Categories->find());
 			$this->set(compact('categories'));
 		}
+		
+		public function view($id = null)
+		{
+			$categories = $this->Categories->findById($id)->first();
+			$this->set(compact('categories'));
+		}
 	}
