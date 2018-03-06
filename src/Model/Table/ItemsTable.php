@@ -8,6 +8,8 @@
 	{
 		public function initialize(array $config)
 		{
+			$this->hasMany('Categories');
+			$this->hasMany('Items');
 			$this->addBehavior('Timestamp');
 		}
 	}
