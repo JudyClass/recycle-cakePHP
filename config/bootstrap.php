@@ -217,3 +217,5 @@ Plugin::load('ReycyleTheme');
 if (Configure::read('debug')) {
     Plugin::load('DebugKit', ['bootstrap' => true]);
 }
+
+Plugin::load('Search');

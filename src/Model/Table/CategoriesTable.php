@@ -9,6 +9,7 @@
 		public function initialize(array $config)
 		{
 			$this->hasMany('Items');
+			$this->displayField('name');
 			$this->addBehavior('Timestamp');
 		}
 	}

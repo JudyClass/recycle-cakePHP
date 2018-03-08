@@ -18,6 +18,8 @@ use Cake\Core\Configure;
 use Cake\Network\Exception\ForbiddenException;
 use Cake\Network\Exception\NotFoundException;
 use Cake\View\Exception\MissingTemplateException;
+use Cake\ORM\TableRegistry;
+
 
 /**
  * Static content controller
@@ -55,7 +57,9 @@ class PagesController extends AppController
         if (!empty($path[1])) {
             $subpage = $path[1];
         }
-        $this->set(compact('page', 'subpage'));
+        $itemsTable = TableRegistry::get('Items');
+        $items = $itemsTable->newEntity();
+        $this->set(compact('page', 'subpage', 'items'));
 
         try {
             $this->render(implode('/', $path));

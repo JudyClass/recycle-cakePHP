@@ -6,17 +6,30 @@
             <h1 class="mb-5">Is it Recyclable?</h1>
           </div>
           <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-            <form>
+					<form method="post" action="items">
+          <!--<?php echo print_r($items); echo $this->Form->create($items, ['type' => 'get']);?>-->
+					  <div class="form-row">
+              <div class="col-12 col-md-9 mb-2 mb-md-0">
+								<?php echo $this->Form->input('name', array('label' => false, "class" => " form-control form-control-lg", "placeholder" => __('Candy Wrapper'), 'id' => 'search'));?>
+              </div>
+              <div class="col-12 col-md-3">
+							  <?php echo $this->Form->submit(('Check it!'),['class'=>'btn btn-block btn-lg btn-primary']); ?>
+              </div>
+            </div>
+					<?php echo $this->Form->end(); ?>
+					
+          
+            <!--<form>
               <div class="form-row">
                 <div class="col-12 col-md-9 mb-2 mb-md-0">
 	                <?php echo $this->Form->input('link', array('label' => false, "class" => " form-control form-control-lg", "placeholder" => __('Candy Wrapper'), 'id' => 'search'));?>
                 </div>
                 <div class="col-12 col-md-3">
 	                <a href="result.php" class="btn btn-block btn-lg btn-primary">Check it!</a>
-                  <!--<button type="submit" class="btn btn-block btn-lg btn-primary">Check it!</button>-->
+                  <button type="submit" class="btn btn-block btn-lg btn-primary">Check it!</button>
                 </div>
               </div>
-            </form>
+            </form>-->
           </div>
         </div>
       </div>

@@ -4,11 +4,32 @@
 	
 	class ItemsController extends AppController
 	{
+		public function initialize()
+		{
+		    parent::initialize();
+		
+		    $this->loadComponent('Search.Prg', [
+		        // This is default config. You can modify "actions" as needed to make
+		        // the PRG component work only for specified methods.
+		        'actions' => ['index', 'lookup']
+		    ]);
+		}
+		
 		public function index()
 		{
 			$this->loadComponent('Paginator');
-			$items = $this->Paginator->paginate($this->Items->find());
-			$this->set(compact('items'));
+			//$items = $this->Paginator->paginate($this->Items->find());
+			//$this->set(compact('items'));
+			
+			 $query = $this->Items
+        // Use the plugins 'search' custom finder and pass in the
+        // processed query params
+        ->find('search', ['search' => $this->request->query]);
+        // You can add extra things to the query if you need to
+        //->contain(['Comments'])
+        //->where(['title IS NOT' => null]);
+
+    $this->set('items', $this->paginate($query));
 		}
 		
 		public function view($id = null)
@@ -34,6 +55,10 @@
             $this->Flash->error(__('Unable to add your item.'));
         }
         $this->set('items', $items);
+        
+        $categories = $this->Items->Categories->find('list');
+        $this->set('items', $items);
+        $this->set('categories', $categories);
     }
     
     public function edit($id)
@@ -49,5 +74,13 @@
 		    }
 		
 		    $this->set('items', $items);
+		    
+		    $categories = $this->Items->Categories->find('list');
+        $this->set('items', $items);
+        $this->set('categories', $categories);
+		}
+		public function search()
+		{
+		   $this->render('/Items/index');
 		}
 	}

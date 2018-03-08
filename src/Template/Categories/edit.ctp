@@ -1,8 +1,7 @@
-<h1><?php echo $categories->name; ?></h1>
 <div class="container page-header-container">
 	 <div class="row">
 				<div class="col-lg-12 text-center">
-          <h2><?php echo $categories->name; ?></h2>
+          <h2>Edit Item</h2>
 				</div>
 	 </div>
  </div> 
@@ -10,8 +9,13 @@
 	 <div class="row">
 				<div class="col-lg-12 text-center">
 
-
+				<?php
+				    echo $this->Form->create($categories);
+				    echo $this->Form->control('name');
+				    echo $this->Form->button(__('Save Category'));
+				    echo $this->Form->end();
+				?>
 				</div>
 	 </div>
  </div> 
-
+				
