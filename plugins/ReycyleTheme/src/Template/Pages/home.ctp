@@ -44,7 +44,7 @@
               <div class="features-icons-icon d-flex">
                 <i class="icon-question m-auto text-primary"></i>
               </div>
-              <h3><a href="why-recycle/">Why Recycle?</a></h3>
+              <h3><a href="/why-recycle/">Why Recycle?</a></h3>
               <p class="lead mb-0">You might recycle already, but let's see why we all should be recycling more and encourage others to do it too!</p>
             </div>
           </div>
@@ -53,7 +53,7 @@
               <div class="features-icons-icon d-flex">
                 <i class="icon-layers m-auto text-primary"></i>
               </div>
-							<h3><a href="recyclables.php">View all Recyclables</a></h3>
+							<h3><a href="/items">View all Recyclables</a></h3>
               <p class="lead mb-0">View all recyclables for your city! And learn what you can do to help!</p>
 
             </div>
@@ -63,7 +63,7 @@
               <div class="features-icons-icon d-flex">
                 <i class="icon-location-pin m-auto text-primary"></i>
               </div>
-							  <h3><a href="local-facilities.php">City Recycling Facilities</a></h3>
+							  <h3><a href="/local-facilities">City Recycling Facilities</a></h3>
                 <p class="lead mb-0">Depending on the city you live in, some recyclables are NOT recyclable, weird right?!</p>
 
             </div>

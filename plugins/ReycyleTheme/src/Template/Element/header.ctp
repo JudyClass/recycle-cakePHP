@@ -8,17 +8,17 @@
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav ml-auto mt-2 mt-lg-0 ">
-      <li class="nav-item">
-        <a class="nav-link" href="result.php">Results</a>
+		  <li class="nav-item">
+        <a class="nav-link " href="/recycle-cakePHP/items">All Recycleables</a>
+      </li>
+			<li class="nav-item">
+        <a class="nav-link " href="/recycle-cakePHP/categories">All Categories</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/why-recycle/">Why Recycle</a>
+        <a class="nav-link" href="/recycle-cakePHP/why-recycle">Why Recycle</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link " href="local-facilities.php">Local Facilities</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link " href="recyclables.php">All Recycleables</a>
+        <a class="nav-link " href="/recycle-cakePHP/local-facitlies">Local Facilities</a>
       </li>
     </ul>
 

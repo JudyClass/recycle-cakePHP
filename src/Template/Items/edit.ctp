@@ -7,7 +7,7 @@
  </div> 
 <div class="container">
 	 <div class="row">
-				<div class="col-lg-12">
+				<div class="col-lg-12" style="padding: 0 0 40px 0;">
 
 				<?php
 				    echo $this->Form->create($items);

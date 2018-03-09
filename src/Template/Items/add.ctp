@@ -1,3 +1,4 @@
+
 <div class="container page-header-container">
 	 <div class="row">
 				<div class="col-lg-12 text-center">
@@ -7,7 +8,7 @@
  </div> 
 <div class="container">
 	 <div class="row">
-				<div class="col-lg-12">
+				<div class="col-lg-12" style="padding: 0 0 40px 0;">
 
 				<?php
 				    echo $this->Form->create($items);
@@ -18,7 +19,7 @@
 				    echo $this->Form->button(__('Save Item'),['class'=>'btn btn-lg btn-primary']);
 				    echo $this->Form->end();
 				?>
-				</div>
-	 </div>
- </div> 
 			
+		</div>
+	 </div>
+ </div> 											
